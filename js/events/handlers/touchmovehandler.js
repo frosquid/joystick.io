@@ -22,7 +22,7 @@ export default function touchmove(ev,obj){
                 touchCaches[idx].joyStick.inner.y = y;
             }
             
-            console.log(touchCaches)
+            console.table(touchCaches)
         }
     }
 }
