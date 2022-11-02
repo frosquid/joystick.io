@@ -10,7 +10,7 @@ export default function radiusIdentifier(touches,obj){
             joyStick[i].run = true;
             return touchCaches.push({identifier : touches.identifier, joyStick : obj.joyStick[i]})
         }
-        if( joyStick[i].areaX <= toucheX  && 
+        else if( joyStick[i].areaX <= toucheX  && 
             joyStick[i].areaWidth >= toucheX &&
             joyStick[i].areaY <= toucheY &&
             joyStick[i].areaHeight >= toucheY && joyStick[i].mode == 'dynamic'){

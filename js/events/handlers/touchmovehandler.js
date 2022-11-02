@@ -17,7 +17,7 @@ export default function touchmove(ev,obj){
                 touchCaches[i].joyStick.inner.x = toucheX;
                 touchCaches[i].joyStick.inner.y = toucheY;
             }
-            if(touches[i].indentifier === touchCaches[idx].joyStick.indentifier && radius >= touchCaches[idx].joyStick.maxOffsetRadius){
+            else if(touches[i].indentifier === touchCaches[idx].joyStick.indentifier && radius >= touchCaches[idx].joyStick.maxOffsetRadius){
                 touchCaches[i].joyStick.inner.x = x;
                 touchCaches[i].joyStick.inner.y = y;
             }
