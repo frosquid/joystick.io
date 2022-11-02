@@ -14,12 +14,12 @@ export default function touchmove(ev,obj){
             const [radius,degrees] = RadiusDegrees.get(touchCaches[idx].joyStick.outter.x,touchCaches[idx].joyStick.outter.y,toucheX,toucheY);
             const [x,y] = Cordinate.get(touchCaches[idx].joyStick.outter.x,touchCaches[idx].joyStick.outter.y,touchCaches[idx].joyStick.maxOffsetRadius,degrees);
             if(touches[i].indentifier === touchCaches[idx].joyStick.indentifier && radius <= touchCaches[idx].joyStick.maxOffsetRadius){
-                touchCaches[i].joyStick.inner.x = toucheX;
-                touchCaches[i].joyStick.inner.y = toucheY;
+                touchCaches[idx].joyStick.inner.x = toucheX;
+                touchCaches[idx].joyStick.inner.y = toucheY;
             }
-            else if(touches[i].indentifier === touchCaches[idx].joyStick.indentifier && radius >= touchCaches[idx].joyStick.maxOffsetRadius){
-                touchCaches[i].joyStick.inner.x = x;
-                touchCaches[i].joyStick.inner.y = y;
+            else if(touches[i].indentifier === touchCaches[idx].joyStick.indentifier && radius >= touchCaches[idx].joyStick.maxOffsetRadius ){
+                touchCaches[idx].joyStick.inner.x = x;
+                touchCaches[idx].joyStick.inner.y = y;
             }
             
             console.log(touchCaches)
