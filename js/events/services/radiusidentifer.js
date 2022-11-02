@@ -1,8 +1,8 @@
 import RadiusDegrees from "../../services/radiusdegrees.js";
 import { touchCaches } from "./touchCaches.js";
 export default function radiusIdentifier(touches,obj){
-        const toucheX = (touches.clientX - touches.target.offsetLeft )* obj.canvas.resolution ;
-        const toucheY = (touches.clientY - touches.target.offsetTop)* obj.canvas.resolution ;
+        const toucheX = (touches.clientX  * obj.canvas.resolution ) - ((touches.target.offsetLeft  )* obj.canvas.resolution);
+        const toucheY = (touches.clientY * obj.canvas.resolution ) - ((touches.target.offsetTop ) * obj.canvas.resolution);
     const joyStick = obj.joyStick;
     for(let i = 0; i < joyStick.length ; i++){
         const [radius,degrees] = RadiusDegrees.get(joyStick[i].outter.x,joyStick[i].outter.y,toucheX,toucheY);

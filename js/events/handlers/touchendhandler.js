@@ -15,7 +15,7 @@ export default function touchend(ev,obj){
                 touchCaches[idx].joyStick.run = false;
                 touchCaches.splice(idx,1)
             }
-            else if(touches[i].indentifier === touchCaches[idx].joyStick.indentifier && touchCaches[idx].joyStick.mode == 'dynamic'){
+            if(touches[i].indentifier === touchCaches[idx].joyStick.indentifier && touchCaches[idx].joyStick.mode == 'dynamic'){
                 touchCaches[idx].joyStick.run = false;
                 touchCaches.splice(idx,1)
             }
